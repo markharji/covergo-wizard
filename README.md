@@ -1,5 +1,12 @@
 # covergo-wizard
 
+# Video Recording
+
+```
+https://drive.google.com/file/d/1NpS58hVc0tJstpiQMbu_W2Fa1mrOUMm8/view?usp=sharing
+
+```
+
 ## Project setup
 
 ```
