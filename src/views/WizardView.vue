@@ -7,17 +7,23 @@
         <form class="form-groups">
           <div class="form-input w-2/5">
             <label>Name</label>
-            <input type="text" v-model="userDetails.name" />
+            <input type="text" v-model="userDetails.name" placeholder="name" />
           </div>
 
           <div class="form-input w-2/5">
             <label>Age</label>
-            <input type="number" v-model="userDetails.age" min="0" />
+            <input
+              type="number"
+              v-model="userDetails.age"
+              min="0"
+              placeholder="age"
+            />
           </div>
 
           <div class="form-input w-2/5">
             <label>Where do you live?</label>
             <select v-model="userDetails.country">
+              <option default value="" disabled>Select Country</option>
               <option value="Hongkong">Hong Kong</option>
               <option value="USA">USA</option>
               <option value="Australia">Australia</option>
