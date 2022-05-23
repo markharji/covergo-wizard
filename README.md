@@ -31,6 +31,13 @@ npm run build
 npm run lint
 ```
 
+### Git Branches
+
+```
+    master ( 2 routes )
+    wizard_covergo_one_route ( 1 route solution)
+```
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
