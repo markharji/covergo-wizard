@@ -1,5 +1,9 @@
 <template>
   <div class="wizard-page flex justify-center rounded shadow-lg">
+    <template v-if="currentPage === 1">
+      <HomeView @start="currentPage = 2" />
+    </template>
+
     <template v-if="currentPage === 2">
       <div class="form w-3/4 shadow-lg">
         <h2 class="header-text">Tell us about Yourself</h2>
@@ -64,11 +68,13 @@
         :premiumRate="rates[selectedPremium]"
         :userDetails="userDetails"
         @goNext="goNext()"
+        @goBack="currentPage = 1"
       />
     </template>
     <template v-if="currentPage === 3">
       <FinalSummary
         @goBack="currentPage = 2"
+        @buy="currentPage = 1"
         :premiumRate="rates[selectedPremium]"
         :userDetails="userDetails"
         :selectedPremium="selectedPremium"
@@ -76,7 +82,7 @@
     </template>
 
     <template v-if="currentPage === -1">
-      <PageError />
+      <PageError @home="currentPage = 1" />
     </template>
   </div>
 </template>
@@ -86,6 +92,7 @@ import ShortSummary from "@/components/ShortSummary";
 import FinalSummary from "@/components/FinalSummary";
 import PageError from "@/components/PageError";
 import { ratePerCountry, currency } from "../helpers/constants.js";
+import HomeView from "./HomeView.vue";
 
 export default {
   name: "WizardView",
@@ -98,10 +105,10 @@ export default {
       },
       selectedPremium: "standard",
       rates: {},
-      currentPage: 2,
+      currentPage: 1,
     };
   },
-  components: { ShortSummary, FinalSummary, PageError },
+  components: { ShortSummary, FinalSummary, PageError, HomeView },
   methods: {
     goNext() {
       if (this.userDetails.age > 100) {
@@ -116,7 +123,6 @@ export default {
       deep: true,
       handler(val) {
         if (!(val.age && val.country)) return;
-        console.log(val);
         this.rates = {
           standard:
             10 * val.age * ratePerCountry[val.country] +
@@ -131,6 +137,18 @@ export default {
             " " +
             currency[val.country],
         };
+      },
+    },
+    currentPage: {
+      handler(val, prevVal) {
+        if (prevVal === 1) {
+          this.userDetails = {
+            name: "",
+            age: "",
+            country: "",
+          };
+          this.selectedPremium = "standard";
+        }
       },
     },
   },

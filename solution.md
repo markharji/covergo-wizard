@@ -1,10 +1,6 @@
 # Pages
 
-I used 3 routes which are the following :
-
-# home ( / )
-
-    which serve as the landing page and the page 1 of the application
+I used 1 route in this approach
 
 # wizard (/wizard)
 

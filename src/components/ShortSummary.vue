@@ -61,7 +61,8 @@ export default {
     navigate(whereTo) {
       switch (whereTo) {
         case "home":
-          this.$router.push({ name: "home" });
+          //   this.$router.push({ name: "home" });
+          this.$emit("goBack");
           break;
         case "next":
           this.$emit("goNext");

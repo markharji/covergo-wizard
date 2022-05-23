@@ -5,9 +5,12 @@
       <p class="mb-8 mt-8">
         Let's buy some insurance. It is going to take only a few steps
       </p>
-      <router-link class="font-bold py-4 px-8 rounded button-start" to="/wizard"
-        >Start!</router-link
+      <button
+        class="font-bold py-4 px-8 rounded button-start"
+        @click="$emit('start')"
       >
+        Start!
+      </button>
     </div>
   </div>
 </template>
@@ -22,14 +25,14 @@ export default {
 
 <style scoped lang="scss">
 .landing-page {
-  padding: 20px;
+  padding: 0px !important;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .jumbotron {
-  width: 60%;
+  width: 80%;
   padding: 100px 50px 100px 50px;
   background: #0b4141;
   color: #faf0dc;

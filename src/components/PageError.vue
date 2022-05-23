@@ -6,10 +6,7 @@
       now
     </p>
 
-    <button
-      class="error-button py-4 px-8 rounded m-8"
-      @click="$router.push({ name: 'home' })"
-    >
+    <button class="error-button py-4 px-8 rounded m-8" @click="$emit('home')">
       Ok :(
     </button>
   </div>
