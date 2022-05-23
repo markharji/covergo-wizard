@@ -1,6 +1,6 @@
 # Pages
 
-I used 3 routes which are the following :
+I used 2 routes which are the following :
 
 # home ( / )
 

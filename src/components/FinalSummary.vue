@@ -65,10 +65,8 @@ export default {
   },
   methods: {
     navigate(whereTo) {
-      console.log(whereTo);
       switch (whereTo) {
         case "home":
-          console.log("wews");
           this.$router.push({ name: "home" });
           break;
       }

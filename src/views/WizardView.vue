@@ -116,7 +116,6 @@ export default {
       deep: true,
       handler(val) {
         if (!(val.age && val.country)) return;
-        console.log(val);
         this.rates = {
           standard:
             10 * val.age * ratePerCountry[val.country] +
