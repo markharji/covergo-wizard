@@ -16,7 +16,7 @@
 
           <div class="form-input w-2/5">
             <label>Age</label>
-            <input type="number" v-model="userDetails.age" />
+            <input type="number" v-model="userDetails.age" min="0" />
           </div>
 
           <div class="form-input w-2/5">
