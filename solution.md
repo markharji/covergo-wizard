@@ -61,3 +61,7 @@ Package Choices contains the 3 cards which the user can select by clicking.. Pri
     The user will be having two action buttons ( Back and Next )
 
     Back will redirect the user to the previous page, while Next button will be having a check if the age is over 100, if yes the user will be directed to the page error page, other wise will proceed to the last step which contains the summary of the user transactions and buttons of Back and Buy provided that all 3 input fields are filled up, otherwise the button is disabled. Back button will redirect you to the previous page with information user provided. Then Buy button will redirect to the landing page.
+
+# One route solution
+
+    git checkout wizard_covergo_one_route
