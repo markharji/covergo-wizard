@@ -7,13 +7,13 @@
 
       <div class="actions">
         <button
-          class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-8 rounded"
+          class="bg-red-900 hover:bg-red-700 text-white font-bold py-2 px-8 rounded"
           @click="navigate('home')"
         >
           Back
         </button>
         <button
-          class="bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-8 rounded"
+          class="bg-green-900 hover:bg-green-700 text-white font-bold py-2 px-8 rounded"
           :disabled="!formIsValid"
           :class="{
             'bg-green-300 hover:bg-green-300 cursor-not-allowed': !formIsValid,
